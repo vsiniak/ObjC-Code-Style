@@ -67,7 +67,7 @@ NSTimeInterval animation_duration;
 ```
 
 * Названия классов, протоколов, перечислений (`enum`) и констант начинаются с заглавной буквы.
-* Названия классов начинаются с 2-3-символьного префикса, соответствуюещего проекту. (Так просто искать классы и файлы проекта.)
+* Названия классов начинаются с 2-3-символьного префикса, соответствующего проекту. (Так просто искать классы и файлы проекта.)
 * Названия констант имеют префикс в виде названия класса, к которому константы относятся.
 
 **Хорошо**
@@ -949,7 +949,7 @@ typedef NS_ENUM(NSUInteger, OSItemError)
 **Хорошо**
 
 ```objc
-- (void)displayName
+- (NSString *)displayName
 {
     return [self.name stringByAppendingString:self.surname];
 }
@@ -963,7 +963,7 @@ typedef NS_ENUM(NSUInteger, OSItemError)
 **Плохо**
 
 ```objc
-- (void)createDisplayNameAlert
+- (NSString *)createDisplayNameAlert
 {
     return [OSAlert alertWithText:self.displayName]; // Тут всё хорошо
 }
@@ -1059,7 +1059,7 @@ typedef NS_ENUM(NSUInteger, OSItemError)
 #pragma mark - Interface methods
 #pragma mark * setters/getters
 
-- (void)title
+- (NSString *)title
 {
     return (self.title != nil) ? self.title : @"";
 }
